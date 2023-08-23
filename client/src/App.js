@@ -6,6 +6,7 @@ import Score from './component/Score';
 import Activity from './component/Activity';
 import Session from './component/Session';
 import Performance from './component/Performance';
+//import Test from './component/Test'
 
 function App() {
   const userId = 12
@@ -18,6 +19,7 @@ function App() {
       <Activity userId={userId} />
       <Session userId={userId} />
       <Performance userId={userId} />
+      {/* <Test/>  */}
     </div>
   );
 }

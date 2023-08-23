@@ -1,13 +1,23 @@
-import { useUserAverageSessions } from "../utilities/useUserAverageSessions"
+import { fetchUserAverageSessions } from "../service/userService"
+import { useEffect, useState } from "react"
 
 export default function Session(props) {
     const {userId} = props
-    const userData = useUserAverageSessions(userId)
+    const [userData, setUserAverageSessions] = useState({sessions:[]})
+
+    async function fetchData() {
+        const userData = await fetchUserAverageSessions(userId)
+        setUserAverageSessions(userData.data)
+    }
+
+    useEffect(() => {
+        fetchData()
+    }, []);
 
     return (
         <div>
             <p>Sessions:</p>
-                {userData.sessions && userData.sessions.map((session, index) => (
+                {userData.sessions.map((session, index) => (
                     <li key={index}>
                         Jour : {session.day}, Temps : {session.sessionLength}
                     </li>

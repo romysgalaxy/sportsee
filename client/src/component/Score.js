@@ -1,8 +1,18 @@
-import { useUserData } from "../utilities/useUserData"
+import { fetchUserData } from "../service/userService"
+import { useEffect, useState } from "react"
 
 export default function Score(props) {
     const {userId} = props
-    const userData = useUserData(userId)
+    const [userData, setUserData] = useState({})
+
+    async function fetchData() {
+        const userData = await fetchUserData(userId)
+        setUserData(userData.data)
+    }
+
+    useEffect(() => {
+        fetchData()
+    }, []);
 
     return (
         <div>
