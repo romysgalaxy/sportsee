@@ -12,7 +12,7 @@ function App() {
   const userId = 12
 
   return (
-    <div className="App">
+    <div className="app">
       <Hello userId={userId}/>
       <GlobalData userId={userId} />
       <Score userId={userId} />
