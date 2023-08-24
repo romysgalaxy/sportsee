@@ -1,5 +1,6 @@
 import { fetchUserAverageSessions } from "../service/userService"
 import { useEffect, useState } from "react"
+import SimpleLineChart from "./chart/SimpleLineChart"
 
 export default function Session(props) {
     const {userId} = props
@@ -22,6 +23,7 @@ export default function Session(props) {
                         Jour : {session.day}, Temps : {session.sessionLength}
                     </li>
                 ))}
+            <SimpleLineChart sessions={userData.sessions}/>
         </div>
     )
 }

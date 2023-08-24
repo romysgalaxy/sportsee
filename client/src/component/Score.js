@@ -1,5 +1,6 @@
 import { fetchUserData } from "../service/userService"
 import { useEffect, useState } from "react"
+import SimpleRadialBarChart from "./chart/SimpleRadialBarChart"
 
 export default function Score(props) {
     const {userId} = props
@@ -17,6 +18,7 @@ export default function Score(props) {
     return (
         <div>
             <p>Score {userData.todayScore} %</p>
+            <SimpleRadialBarChart score={userData}/>
         </div>
     )
 }

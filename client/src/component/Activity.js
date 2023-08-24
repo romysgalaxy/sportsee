@@ -1,6 +1,6 @@
 import { fetchUserActivity } from "../service/userService"
 import { useEffect, useState } from "react"
-//import SimpleBarChart from "./SimpleBarChart"
+import SimpleBarChart from "./chart/SimpleBarChart"
 
 export default function Activity(props) {
 
@@ -18,7 +18,7 @@ export default function Activity(props) {
 
     return (
         <div>
-            <p>Performance :</p>
+            <p>Activity :</p>
             <ul>
                 {userData.sessions.map((session, index) => (
                     <li key={index}>
@@ -27,9 +27,7 @@ export default function Activity(props) {
                 ))}
             </ul>
             <div>
-                {/* {userData.sessions && (
-                    <SimpleBarChart sessions={userData.sessions} />
-                )} */}
+                <SimpleBarChart sessions={userData.sessions}/> 
             </div>
         </div>
     )

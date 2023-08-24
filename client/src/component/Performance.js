@@ -1,5 +1,6 @@
 import { fetchUserPerformance } from "../service/userService"
 import { useEffect, useState } from "react"
+import SimpleRadarChart from "./chart/SimpleRadarChart"
 
 export default function Performance(props) {
 
@@ -19,7 +20,7 @@ export default function Performance(props) {
 
     return (
         <div>
-            <p>Activité :</p>
+            <p>Performance :</p>
             <ul>
                 {userPerformance.map((data, index) => (
                     <li key={index}>
@@ -27,6 +28,7 @@ export default function Performance(props) {
                     </li>
                 ))}
             </ul>
+            <SimpleRadarChart performance={userPerformance} kind={userKind} />
         </div>
     )
 }

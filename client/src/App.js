@@ -19,7 +19,6 @@ function App() {
       <Activity userId={userId} />
       <Session userId={userId} />
       <Performance userId={userId} />
-      {/* <Test/>  */}
     </div>
   );
 }
