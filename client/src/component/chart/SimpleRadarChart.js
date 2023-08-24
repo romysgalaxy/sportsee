@@ -12,25 +12,35 @@ export default function SimpleRadarChart(props) {
   console.log('performance', performance)
   console.log('kind', kind)
 
+  const capitalizeFirstLetter = (string) => {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  };
+
   const data = performance.map(performance => ({
     value: performance.value,
-    kindName:  kind[performance.kind],
+    kindName: capitalizeFirstLetter(kind[performance.kind]),
   }));
-
 
   return (
     <RadarChart
-      cx={300}
-      cy={250}
-      outerRadius={150}
-      width={500}
-      height={500}
+      cx={130}
+      cy={130}
+      outerRadius={90}
+      width={260}
+      height={260}
       data={data}
     >
       <PolarGrid />
-      <PolarAngleAxis dataKey="kindName" />
-      <PolarRadiusAxis />
-      <Radar name="Performance" dataKey="value" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
+      <PolarAngleAxis 
+        dataKey="kindName"
+        tick={{
+          fontSize: 12, // Adjust font size as needed
+          fill: "#fff", // Adjust text color as needed
+        }}
+        tickLine={false}
+      />
+      <PolarRadiusAxis tick={false} axisLine={false}/>
+      <Radar name="Performance" dataKey="value" fill="#FF0101" fillOpacity={0.7} />
     </RadarChart>
   );
 }
