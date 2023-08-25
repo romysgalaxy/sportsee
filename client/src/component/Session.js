@@ -1,6 +1,7 @@
 import { fetchUserAverageSessions } from "../service/userService"
 import { useEffect, useState } from "react"
 import SimpleLineChart from "./chart/SimpleLineChart"
+import '../style/session.css'
 
 export default function Session(props) {
     const {userId} = props
@@ -16,14 +17,16 @@ export default function Session(props) {
     }, []);
 
     return (
-        <div>
-            <p>Sessions:</p>
-                {userData.sessions.map((session, index) => (
+        <div className="session_container">
+            <p className="session_title">Durée moyenne des <br/>sessions</p>
+                {/* {userData.sessions.map((session, index) => (
                     <li key={index}>
                         Jour : {session.day}, Temps : {session.sessionLength}
                     </li>
-                ))}
-            <SimpleLineChart sessions={userData.sessions}/>
+                ))} */}
+            <div className="session_chart">
+                <SimpleLineChart sessions={userData.sessions}/>
+            </div>
         </div>
     )
 }
