@@ -34,8 +34,8 @@ export default function SimpleRadarChart(props) {
       <PolarAngleAxis 
         dataKey="kindName"
         tick={{
-          fontSize: 12, // Adjust font size as needed
-          fill: "#fff", // Adjust text color as needed
+          fontSize: 10,
+          fill: "#fff",
         }}
         tickLine={false}
       />

@@ -6,13 +6,16 @@ import Score from './component/Score';
 import Activity from './component/Activity';
 import Session from './component/Session';
 import Performance from './component/Performance';
-//import Test from './component/Test'
+import Header from './component/Header';
+import SideBar from './component/SideBar'
 
 function App() {
   const userId = 12
 
   return (
     <div className="app">
+      <Header />
+      <SideBar />
       <Hello userId={userId}/>
       <GlobalData userId={userId} />
       <Score userId={userId} />

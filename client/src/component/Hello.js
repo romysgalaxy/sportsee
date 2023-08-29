@@ -1,5 +1,6 @@
 import { fetchUserData } from "../service/userService"
 import { useEffect, useState } from "react"
+import '../style/hello.css'
 
 export default function Hello(props) {
     const {userId} = props
@@ -15,9 +16,9 @@ export default function Hello(props) {
     }, []);
 
     return (
-        <div>
-            <p>Hello {userData.firstName}</p>
-            <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
+        <div className="hello_container">
+            <p className="hello_title">Hello <span>{userData.firstName}</span></p>
+            <p className="hello_content">Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
         </div>
     )
 }

@@ -21,14 +21,6 @@ export default function Performance(props) {
 
     return (
         <div className="performance_container">
-            {/* <p>Performance :</p>
-            <ul>
-                {userPerformance.map((data, index) => (
-                    <li key={index}>
-                        Value: {data.value}, Kind: {userKind[data.kind]}
-                    </li>
-                ))}
-            </ul> */}
             <SimpleRadarChart performance={userPerformance} kind={userKind} />
         </div>
     )

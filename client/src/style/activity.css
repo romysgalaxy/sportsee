@@ -1,0 +1,33 @@
+.activity_container {
+    width: 835px;
+    height: 320px;
+    background-color: #FBFBFB;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.activity_title {
+    position: absolute;
+    margin: 0;
+    top: 25px;
+    left: 25px;
+    font-size: 15px;
+    color: #20253A;
+}
+
+.activity_tooltip {
+    background-color: #E60000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.activity_tooltip p {
+    color: #ffffff;
+    font-size: 12px;
+    margin: 7px 0;
+}

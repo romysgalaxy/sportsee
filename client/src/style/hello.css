@@ -1,0 +1,12 @@
+.hello_title {
+    font-size: 48px;
+    margin: 10px 0;
+}
+
+.hello_title span {
+    color: #FF0101;
+}
+
+.hello_content {
+    font-size: 18px;
+}
