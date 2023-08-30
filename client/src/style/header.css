@@ -1,0 +1,28 @@
+.header {
+    background-color: #020203;
+    height: 90px;
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 30px;
+    max-width: 1440px;
+    width: 100%;
+}
+
+.header ul {
+    width: 80%;
+   margin: 0;
+   padding: 0;
+   list-style-type: none;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.header li {
+  color: #fff;
+ }
