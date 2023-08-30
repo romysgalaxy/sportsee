@@ -23,13 +23,8 @@ export default function SimpleBarChart(props) {
     color: "#9B9EAC",
   };
 
-  // const legendStyle = {
-  //   fontSize: 14,
-  //   color: "#74798C",
-  // };
-
-  const legendFormatter = (value, entry) => {
-    return <span style={{ color: "#74798C"}}>{value}</span>;
+  const legendFormatter = (value) => {
+    return <span style={{ color: "#74798C", fontSize:"14px"}}>{value}</span>;
   };
 
   return (

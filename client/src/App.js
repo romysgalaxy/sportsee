@@ -16,12 +16,26 @@ function App() {
     <div className="app">
       <Header />
       <SideBar />
-      <Hello userId={userId}/>
-      <GlobalData userId={userId} />
-      <Score userId={userId} />
-      <Activity userId={userId} />
-      <Session userId={userId} />
-      <Performance userId={userId} />
+      <div className='content'>
+        <div className='title'>
+          <Hello userId={userId}/>
+        </div>
+        <div className='dashboard'>
+          <div className='dashboard_section1'>
+            <div className='dashboard_activity'>
+              <Activity userId={userId} />
+            </div>
+            <div className='dashboard_chart'>
+              <Session userId={userId} />
+              <Performance userId={userId} />
+              <Score userId={userId} />
+            </div>
+          </div>
+          <div className='dashboard_section2'>
+            <GlobalData userId={userId} />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

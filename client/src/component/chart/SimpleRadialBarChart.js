@@ -17,8 +17,6 @@ export default function SimpleRadialBarChart(props) {
 
   const { score } = props;
   const todayScorePercentage = score.todayScore * 100;
-  console.log("score", score);
-  console.log("todayScorePercentage", todayScorePercentage);
   data[0].uv = todayScorePercentage;
 
   const middleX = 80; // X-coordinate of the center

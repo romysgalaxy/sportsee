@@ -1,6 +1,5 @@
 export default function SimpleCard (props) {
     const {img, color, data, text} = props
-    console.log('img', img)
     return (
         <div className="simpleCard_container">
             <div className="simpleCard_img" style={{backgroundColor: color}}>

@@ -17,7 +17,7 @@ export default function GlobalData(props) {
     }, []); 
 
     return (
-        <div>
+        <div className="globalData">
             <SimpleCard img='./flame.svg' color='rgba(255, 0, 0, 0.06)' data={`${userData.calorieCount}kCal`} text='Calories'/>
             <SimpleCard img='./meet.svg' color='rgba(74, 184, 255, 0.1)' data={`${userData.proteinCount}g`} text='Proteines'/>
             <SimpleCard img='./apple.svg' color='rgba(249, 206, 35, 0.1)' data={`${userData.carbohydrateCount}g`} text='Glucides'/>

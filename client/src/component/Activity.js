@@ -20,13 +20,6 @@ export default function Activity(props) {
     return (
         <div className="activity_container">
             <p className="activity_title">Activité quotidienne</p>
-            {/* <ul>
-                {userData.sessions.map((session, index) => (
-                    <li key={index}>
-                        Jour : {session.day}, Kilogram : {session.kilogram}, Calories : {session.calories}
-                    </li>
-                ))}
-            </ul> */}
             <div>
                 <SimpleBarChart sessions={userData.sessions}/> 
             </div>

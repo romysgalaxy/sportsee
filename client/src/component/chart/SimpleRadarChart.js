@@ -9,8 +9,6 @@ import {
 
 export default function SimpleRadarChart(props) {
   const { performance, kind } = props;
-  console.log('performance', performance)
-  console.log('kind', kind)
 
   const capitalizeFirstLetter = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
